@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".ChronometerActivity">
+
+    <Chronometer
+        android:id="@+id/my_chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="2"
+        android:background="@drawable/background_clock"
+
+        app:iconGravity ="textStart"
+        android:textSize="@android:dimen/app_icon_size"
+        android:textColor="#FFFFFF"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:fontFamily="@font/custom_style"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/timer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_chronometer"
+        app:layout_constraintVertical_weight="6">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_list"
+        app:layout_constraintVertical_weight="2">
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="2dp"
+            app:icon="@drawable/play_icon"
+            app:iconGravity ="textStart"
+            android:onClick="buttonClick"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:text="@string/button_play_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_stop"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="2dp"
+            android:onClick="buttonClick"
+            android:text="@string/button_stop_text"
+            app:icon="@drawable/stop_icon"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:iconGravity ="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_refresh"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_play"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_refresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="2dp"
+            app:icon="@drawable/refresh_icon"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:iconGravity ="textStart"
+            android:onClick="buttonClick"
+            android:text="Refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_stop"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

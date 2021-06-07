@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineAmbientShadowColor="@color/black"
+    android:layout_margin="4dp"
+    android:background="@drawable/background_clock"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_list"
+        style="@style/Widget.MaterialComponents.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textAlignment="viewStart"
+        android:drawableEnd="@drawable/icon_clock"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+</LinearLayout>

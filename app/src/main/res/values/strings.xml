@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyCountDownTimer</string>
+    <string name="button_play_text">Start</string>
+    <string name="button_stop_text">Stop</string>
+</resources>
